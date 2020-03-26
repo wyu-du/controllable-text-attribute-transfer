@@ -31,7 +31,7 @@ parser.add_argument('--id_eos', type=int, default=3, help='')
 ######################################################################################
 #  File parameters
 ######################################################################################
-parser.add_argument('--task', type=str, default='imagecaption', help='Specify datasets.')
+parser.add_argument('--task', type=str, default='yelp', help='Specify datasets.')
 parser.add_argument('--word_to_id_file', type=str, default='', help='')
 parser.add_argument('--data_path', type=str, default='', help='')
 
@@ -54,9 +54,9 @@ parser.add_argument('--label_size', type=int, default=1)
 
 args = parser.parse_args()
 
-#args.if_load_from_checkpoint = False
-args.if_load_from_checkpoint = True
-args.checkpoint_name = "1557891887"
+args.if_load_from_checkpoint = False
+#args.if_load_from_checkpoint = True
+#args.checkpoint_name = "1557891887"
 
 
 ######################################################################################
