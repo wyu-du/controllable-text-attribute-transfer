@@ -50,13 +50,11 @@ parser.add_argument('--word_dropout', type=float, default=1.0)
 parser.add_argument('--embedding_dropout', type=float, default=0.5)
 parser.add_argument('--learning_rate', type=float, default=0.001)
 parser.add_argument('--label_size', type=int, default=1)
+parser.add_argument('--if_load_from_checkpoint', '-load', type=bool, default=False)
+parser.add_argument('--checkpoint_name', '-ckpt', type=str, default='1585250492')
 
 
 args = parser.parse_args()
-
-args.if_load_from_checkpoint = False
-#args.if_load_from_checkpoint = True
-#args.checkpoint_name = "1557891887"
 
 
 ######################################################################################
