@@ -22,6 +22,7 @@ def load_human_answer(data_path):
         with open(file) as f:
             for line in f:
                 line = line.strip()
+                if len(line) == 0: continue
                 line = line.split('\t')[1].split()
                 parse_line = [int(x) for x in line]
                 ans.append(parse_line)
