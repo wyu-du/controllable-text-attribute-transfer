@@ -95,16 +95,8 @@ def preparation():
         os.makedirs(args.current_save_path)
         add_log("Path: %s is created" % args.current_save_path)
 
-    # set task type
-    if args.task == 'yelp':
-        args.data_path = '../data/yelp/processed_files/'
-    elif args.task == 'amazon':
-        args.data_path = '../data/amazon/processed_files/'
-    elif args.task == 'imagecaption':
-        args.data_path = '../data/imagecaption/processed_files/'
-    else:
-        raise TypeError('Wrong task type!')
-
+    # set data path
+    args.data_path =  '../data/'+args.task+'/processed_files/'
     # prepare data
     args.id_to_word, args.vocab_size, \
     args.train_file_list, args.train_label_list = prepare_data(
