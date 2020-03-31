@@ -93,19 +93,16 @@ def prepare_data(data_path, max_num, task_type):
     id_to_word, vocab_size = load_word_dict_info(data_path + 'word_to_id.txt', max_num)
 
     # define train / test file
-    train_file_list = []
-    train_label_list = []
-    if task_type in ['yelp', 'amazon', 'imagecaption']:
-        train_file_list = [
-            data_path + 'sentiment.train.0', data_path + 'sentiment.train.1',
-            data_path + 'sentiment.dev.0', data_path + 'sentiment.dev.1',
-        ]
-        train_label_list = [
-            [0],
-            [1],
-            [0],
-            [1],
-        ]
+    train_file_list = [
+        data_path + 'sentiment.train.0', data_path + 'sentiment.train.1',
+        data_path + 'sentiment.dev.0', data_path + 'sentiment.dev.1',
+    ]
+    train_label_list = [
+        [0],
+        [1],
+        [0],
+        [1],
+    ]
 
     return id_to_word, vocab_size, train_file_list, train_label_list
 
