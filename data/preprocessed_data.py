@@ -8,7 +8,7 @@ def buid_dict_file(data_path):
     dict_file = data_path + 'processed_files/word_to_id.txt'
     file1 = ['sentiment.train.0', 'sentiment.train.1',
              'sentiment.dev.0', 'sentiment.dev.1',
-             'sentiment.test.0', 'sentiment.test.1', 
+#             'sentiment.test.0', 'sentiment.test.1', 
              'reference.test.0', 'reference.test.1']
     for file_item in file1:
         with open(data_path + file_item, 'r') as f:
@@ -53,7 +53,7 @@ def build_id_file(data_path):
     # generate id file
     file1 = ['sentiment.train.0', 'sentiment.train.1',
              'sentiment.dev.0', 'sentiment.dev.1',
-             'sentiment.test.0', 'sentiment.test.1', 
+#             'sentiment.test.0', 'sentiment.test.1', 
              'reference.test.0', 'reference.test.1']
     for file_item in file1:
         id_file_data = []
@@ -85,14 +85,7 @@ if __name__ == '__main__':
     
     args = parser.parse_args()
     # set task type
-    if args.task == 'yelp':
-        args.data_path = 'yelp/processed_files/'
-    elif args.task == 'amazon':
-        args.data_path = 'amazon/processed_files/'
-    elif args.task == 'imagecaption':
-        args.data_path = 'imagecaption/processed_files/'
-    else:
-        raise TypeError('Wrong task type!')
+    args.data_path = args.task + '/processed_files/'
     
     if not os.path.exists(args.data_path):
         os.makedirs(args.data_path)
