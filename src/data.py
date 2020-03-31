@@ -95,7 +95,7 @@ def prepare_data(data_path, max_num, task_type):
     # define train / test file
     train_file_list = []
     train_label_list = []
-    if task_type == 'yelp' or task_type == 'amazon':
+    if task_type in ['yelp', 'amazon', 'imagecaption']:
         train_file_list = [
             data_path + 'sentiment.train.0', data_path + 'sentiment.train.1',
             data_path + 'sentiment.dev.0', data_path + 'sentiment.dev.1',
