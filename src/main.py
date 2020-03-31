@@ -83,6 +83,7 @@ def preparation():
     else:
         timestamp = str(int(time.time()))
         print("create new model save path: %s" % timestamp)
+    timestamp = args.task + "_" + timestamp
     args.current_save_path = 'save/%s/' % timestamp
     args.log_file = args.current_save_path + time.strftime("log_%Y_%m_%d_%H_%M_%S.txt", time.localtime())
     args.output_file = args.current_save_path + time.strftime("output_%Y_%m_%d_%H_%M_%S.txt", time.localtime())
