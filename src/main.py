@@ -38,7 +38,7 @@ parser.add_argument('--data_path', type=str, default='', help='')
 ######################################################################################
 #  Model parameters
 ######################################################################################
-parser.add_argument('--word_dict_max_num', type=int, default=2, help='')
+parser.add_argument('--word_dict_max_num', type=int, default=5, help='')
 parser.add_argument('--batch_size', type=int, default=32, help='')
 parser.add_argument('--max_sequence_length', type=int, default=60)
 parser.add_argument('--num_layers_AE', type=int, default=2)
